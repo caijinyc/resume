@@ -46,11 +46,11 @@ export default {
     margin-bottom: 50px;
     text-align: center;
     .title {
-        padding: 30px 0;
-        color: $color-text-title;
-        font-size: 40px;
-        font-weight: bold;
-        letter-spacing: 1px;
+      padding: 20px 0;
+      color: $color-text-title;
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
     .vue-music {
       img {
@@ -60,8 +60,8 @@ export default {
       }
       .name {
         margin: 15px 0 10px 0;
-        font-size: 25px;
-        color: $color-text-name;
+        font-size: $font-size-medium-x;
+        color: $color-text-title;
         transition: all 1s;
         span {
          font-weight: bold;

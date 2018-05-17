@@ -65,7 +65,7 @@ export default {
     margin-bottom: 50px;
     text-align: center;
     .title {
-        margin: 30px 0;
+        padding: 20px 0;
         color: $color-text-title;
         font-size: 40px;
         font-weight: bold;
@@ -75,11 +75,11 @@ export default {
       .name {
         margin: 20px 0;
         color: $color-text-title;
-        font-size: 25px;
+        font-size: $font-size-medium-x;
         font-weight: bold;
       }
       p {
-        font-size: 16px;
+        font-size: $font-size-small;
         line-height: 23px;
         color: $color-text-l;
       }

@@ -21,7 +21,7 @@ export default {
       education: {
         school: '吉林建筑大学',
         major: '视觉传达专业',
-        graduation: '2019年届毕业生'
+        graduation: '2015.9 - 2019.6'
       }
     }
   }
@@ -48,7 +48,7 @@ export default {
     margin-bottom: 50px;
     text-align: center;
     .title {
-        padding: 30px 0;
+        padding: 20px 0;
         color: $color-text-title;
         font-size: 40px;
         font-weight: bold;

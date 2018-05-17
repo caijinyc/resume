@@ -49,13 +49,23 @@ export default {
       pages: ['首页', '项目', '技能', '教育', '联系']
     }
   },
+  created () {
+    this.canChange = true
+  },
   methods: {
     changePage (item) {
+      if (!this.canChange) {
+        return
+      }
+      this.canChange = false
+      setTimeout(() => {
+        this.canChange = true
+      }, 300)
       console.log(item.wheelDelta)
       let x = item.wheelDelta
-      if (x < 0) {
+      if (x < 0 && this.page < this.pages.length - 1) {
         this.page++
-      } else if (this.page > 0) {
+      } else if (x > 0 && this.page > 0) {
         this.page--
       }
     },

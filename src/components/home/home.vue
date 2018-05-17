@@ -2,16 +2,12 @@
   <div class="home">
     <div class="home-wrapper">
       <div class="avatar">
-        <!-- <img src="" width="150" height="150"> -->
+        <img src="./avatar.png" width="170" height="170">
       </div>
       <div class="text">
         <p class="name">蔡锦 CaiJinyc</p>
         <p class="desc">一个热爱前端、会点设计、善于解决问题的前端工程师。快招我到碗里来吧~</p>
         <p class="go">应聘岗位：前端开发实习生</p>
-        <p class="contact">
-          <a class="email" href="mailto:me@caijin.tech">me@caijin.tech</a>
-          <span class="tel">tel: 15344315015</span>
-        </p>
       </div>
     </div>
   </div>
@@ -46,7 +42,10 @@ export default {
       height: 170px;
       // background: #fff;
       border-radius: 50%;
-      border: 10px solid rgba(255, 255, 255, 0.342)
+      // border: 10px solid rgba(255, 255, 255, 0.342);
+      img {
+        border-radius: 50%;
+      }
     }
     .text {
       .name {
@@ -58,30 +57,16 @@ export default {
         letter-spacing: 1px;
       }
       .desc {
-        font-size: 16px;
+        font-size: $font-size-small;
         line-height: 23px;
         color: $color-text-l;
         @include justify1();
       }
       .go {
-        font-size: 18px;
+        font-size: $font-size-small-x;
         font-weight: bold;
         color: $color-text-title;
         padding: 20px 0 15px 0;
-      }
-      .contact {
-        font-size: 18px;
-        .email {
-          padding-right: 10px;
-          color: $color-text-title;
-          &:hover {
-            color: aqua;
-            transition: all 1s;
-          }
-        }
-        .tel {
-          color: $color-text-title;
-        }
       }
     }
   }
