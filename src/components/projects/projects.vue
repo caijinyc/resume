@@ -6,7 +6,9 @@
         <div class="img">
           <img src="./music.svg" alt="">
         </div>
-        <p class="name" @click="linkGithub">Vue 网易云音乐 WebApp</p>
+        <p class="name" >
+          <span @click="linkGithub">Vue 网易云音乐 WebApp</span>
+        </p>
         <p class="desc">基于 Vue(2.5) + vuex + vue-router + vue-axios +better-scroll + Scss + ES6 等开发一款移动端音乐 WebApp，UI 界面精美、flex 布局适配常见移动端。</p>
       </div>
 
@@ -59,13 +61,15 @@ export default {
       .name {
         margin: 15px 0 10px 0;
         font-size: 25px;
-        font-weight: bold;
         color: $color-text-name;
         transition: all 1s;
-        &:hover {
-          cursor: pointer;
-          color: aqua;
-          transition: all 1s;
+        span {
+         font-weight: bold;
+          &:hover {
+            cursor: pointer;
+            color: aqua;
+            transition: all 1s;
+          }
         }
       }
       .desc {

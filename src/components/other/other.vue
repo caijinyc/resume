@@ -1,14 +1,13 @@
 <template>
   <div class="projects">
     <div class="projects-wrapper">
-      <div class="title">教育背景</div>
+      <div class="title">了解更多</div>
       <div class="text">
-        <div class="edu">
-          <span class="school">{{education.school}}</span>
-        </div>
-        <p class="major">{{education.major}}</p>
-        <p class="graduation">{{education.graduation}}</p>
-        <p class="desc">{{education.desc}}</p>
+          <div class="more">
+              <span class="home">个人主页</span>
+              <span class="github">Github</span>
+          </div>
+          <p class="email"><span class="tit">Email: </span>{{other.email}}</p>
       </div>
     </div>
   </div>
@@ -18,8 +17,8 @@
 export default {
   data () {
     return {
-      education: {
-        school: '吉林建筑大学',
+      other: {
+        email: 'me@caijin.tech',
         major: '视觉传达专业',
         graduation: '2019年届毕业生'
       }
@@ -55,6 +54,14 @@ export default {
         letter-spacing: 1px;
     }
     .text {
+      .more {
+        margin: 20px 0 10px 0;
+        color: $color-text-title;
+        font-size: 25px;
+        span {
+          font-weight: bold;  
+        }
+      }
       .edu {
         margin: 20px 0 10px 0;
         color: $color-text-title;
