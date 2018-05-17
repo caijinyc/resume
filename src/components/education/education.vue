@@ -56,7 +56,7 @@ export default {
     }
     .text {
       .edu {
-        margin: 20px 0 10px 0;
+        margin: 20px 0 20px 0;
         color: $color-text-title;
         font-size: 25px;
         span {
@@ -64,7 +64,7 @@ export default {
         }
       }
       .major, .graduation  {
-        margin: 10px 0;
+        margin: 5px 0;
         line-height: 23px;
         font-size: 16px;
         color: $color-text-l;

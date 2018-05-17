@@ -124,6 +124,7 @@ export default {
           transition: all 0.3s;
         }
         &:hover {
+          background: rgba(255, 255, 255, .9);
           .text {
             opacity: 1;
           }

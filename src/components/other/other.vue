@@ -4,8 +4,8 @@
       <div class="title">了解更多</div>
       <div class="text">
           <div class="more">
-              <span class="home">个人主页</span>
-              <span class="github">Github</span>
+              <span class="home" @click="goBlog">个人主页</span>
+              <span class="github" @click="goGithub">Github</span>
           </div>
           <p class="email"><span class="tit">Email: </span>{{other.email}}</p>
       </div>
@@ -20,8 +20,18 @@ export default {
       other: {
         email: 'me@caijin.tech',
         major: '视觉传达专业',
-        graduation: '2019年届毕业生'
+        graduation: '2019年届毕业生',
+        blog: 'http://caijin.tech/blog/',
+        github: 'https://github.com/CaiJinyc'
       }
+    }
+  },
+  methods: {
+    goBlog () {
+      window.open(this.other.blog)
+    },
+    goGithub () {
+      window.open(this.other.github)
     }
   }
 }
@@ -59,22 +69,13 @@ export default {
         color: $color-text-title;
         font-size: 25px;
         span {
-          font-weight: bold;  
-        }
-      }
-      .edu {
-        margin: 20px 0 10px 0;
-        color: $color-text-title;
-        font-size: 25px;
-        span {
+          cursor: pointer;
           font-weight: bold;
+          transition: all 1s;
+          &:hover {
+            color: $color-text-highlight;
+          }
         }
-      }
-      .major, .graduation  {
-        margin: 10px 0;
-        line-height: 23px;
-        font-size: 16px;
-        color: $color-text-l;
       }
     }
   }

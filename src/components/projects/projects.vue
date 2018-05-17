@@ -65,10 +65,10 @@ export default {
         transition: all 1s;
         span {
          font-weight: bold;
+          transition: all 1s;
           &:hover {
             cursor: pointer;
             color: aqua;
-            transition: all 1s;
           }
         }
       }
