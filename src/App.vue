@@ -69,13 +69,17 @@ export default {
   methods: {
     touchstart (item) {
       this.touchStartY = item.changedTouches[0].pageY
+      this.touchStartX = item.changedTouches[0].pageX
     },
     touchend (item) {
       let touchendY = item.changedTouches[0].pageY
-      let diff = this.touchStartY - touchendY
-      if (diff > 50 && this.page < this.pages.length - 1) {
+      let touchendX = item.changedTouches[0].pageX
+      console.log(touchendX)
+      let diffY = this.touchStartY - touchendY
+      let diffX = this.touchStartX - touchendX
+      if ((diffY > 50 || diffX > 50) && this.page < this.pages.length - 1) {
         this.page++
-      } else if (diff < -50 && this.page > 0) {
+      } else if ((diffY < -50 || diffX < -50) && this.page > 0) {
         this.page--
       }
     },
