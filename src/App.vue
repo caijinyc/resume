@@ -1,5 +1,8 @@
 <template>
-  <div id="app" @mousewheel="changePage">
+  <div id="app" @mousewheel="changePage"
+  @touchstart="touchstart"
+  @touchend="touchend"
+  >
     <transition name="trs">
       <div class="home-wrapper" v-show="page === 0">
         <home></home>
@@ -52,7 +55,30 @@ export default {
   created () {
     this.canChange = true
   },
+  mounted () {
+    document.addEventListener('keydown', (item) => {
+      // console.log(item.keyCode)
+      if ((item.keyCode === 38 || item.keyCode === 37) && this.page > 0) {
+        this.page--
+      }
+      if ((item.keyCode === 39 || item.keyCode === 40) && this.page < this.pages.length - 1) {
+        this.page++
+      }
+    })
+  },
   methods: {
+    touchstart (item) {
+      this.touchStartY = item.changedTouches[0].pageY
+    },
+    touchend (item) {
+      let touchendY = item.changedTouches[0].pageY
+      let diff = this.touchStartY - touchendY
+      if (diff > 50 && this.page < this.pages.length - 1) {
+        this.page++
+      } else if (diff < -50 && this.page > 0) {
+        this.page--
+      }
+    },
     changePage (item) {
       if (!this.canChange) {
         return
@@ -61,7 +87,7 @@ export default {
       setTimeout(() => {
         this.canChange = true
       }, 300)
-      console.log(item.wheelDelta)
+      // console.log(item.wheelDelta)
       let x = item.wheelDelta
       if (x < 0 && this.page < this.pages.length - 1) {
         this.page++
@@ -103,17 +129,37 @@ export default {
     opacity: 0;
   }
   .dots {
-    @media only screen and (max-width: 600px) {
-      display: none;
-    }
     position: fixed;
-    left: 3%;
-    top: 50%;
-    transform: translateY(-50%);
+    @media only screen and (max-width: 600px) {
+      left: 50%;
+      bottom: 2%;
+      transform: translateX(-50%);
+      ul {
+        li {
+          display: inline-block;
+          margin: 0 3px;
+        }
+      }
+    }
+    @media only screen and (min-width: 600px) {
+      left: 3%;
+      top: 50%;
+      transform: translateY(-50%);
+      ul {
+        li {
+        margin: 10px 0;
+        &:hover {
+          background: rgba(255, 255, 255, .9);
+          .text {
+            opacity: 1;
+          }
+        }
+        }
+      }
+    }
     ul {
       li {
         position: relative;
-        margin: 10px 0;
         width: 10px;
         height: 10px;
         background: rgba(255, 255, 255, .5);
@@ -132,12 +178,6 @@ export default {
           opacity: 0;
           font-size: 14px;
           transition: all 0.3s;
-        }
-        &:hover {
-          background: rgba(255, 255, 255, .9);
-          .text {
-            opacity: 1;
-          }
         }
       }
     }

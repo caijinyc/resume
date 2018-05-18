@@ -7,9 +7,15 @@
           <img src="./music.svg" alt="">
         </div>
         <p class="name" >
-          <span @click="linkGithub">Vue 网易云音乐 WebApp</span>
+          <span @click="linkGithubMusic">Vue 网易云音乐 WebApp</span>
         </p>
         <p class="desc">基于 Vue(2.5) + vuex + vue-router + vue-axios +better-scroll + Scss + ES6 等开发一款移动端音乐 WebApp，UI 界面精美、flex 布局适配常见移动端。</p>
+      </div>
+      <div class="vue-music">
+        <p class="name" >
+          <span @click="linkGithubGame">扫雷游戏</span>
+        </p>
+        <p class="desc">使用原生 JavaScript 实现的一个扫雷游戏，实现了扫雷游戏的基本功能，例如：计时、选择游戏难度、标记地雷、剩余地雷、自动连锁点开、游戏成功和失败的动画等功能。</p>
       </div>
 
     </div>
@@ -19,8 +25,11 @@
 <script>
 export default {
   methods: {
-    linkGithub () {
+    linkGithubMusic () {
       window.open('https://github.com/CaiJinyc/vue-music-webapp')
+    },
+    linkGithubGame () {
+      window.open('https://github.com/CaiJinyc/game-mineSweepinng')
     }
   }
 }
@@ -53,6 +62,7 @@ export default {
       letter-spacing: 1px;
     }
     .vue-music {
+      margin-top: 20px;
       img {
         width: 80px;
         height: 80px;
@@ -74,7 +84,7 @@ export default {
       }
       .desc {
         display: inline-block;
-        max-width: 600px;
+        max-width: 700px;
         font-size: 16px;
         line-height: 23px;
         color: $color-text-l;
