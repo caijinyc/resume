@@ -15,6 +15,7 @@
               <a href="mailto:me@caijin.tech">{{other.email}}</a>
             </p>
           </div>
+          <div class="download"><span>下载简历</span></div>
       </div>
     </div>
   </div>
@@ -120,6 +121,19 @@ export default {
               }
             }
           }
+      }
+      .download {
+        margin: 10px;
+        font-size: $font-size-medium-x;
+        color: rgb(0, 255, 255);
+        span {
+          font-weight: bold;
+          transition: all 1s;
+          cursor: pointer;
+          &:hover {
+            color: $color-text-name;
+          }
+        }
       }
     }
   }

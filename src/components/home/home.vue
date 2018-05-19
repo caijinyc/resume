@@ -2,12 +2,12 @@
   <div class="home">
     <div class="home-wrapper">
       <div class="avatar">
-        <img src="./me3.jpg" width="170" height="170">
+        <img src="./me.jpg" width="170" height="170">
       </div>
       <div class="text">
         <p class="name">蔡锦 CaiJinyc</p>
-        <p class="desc">一个热爱前端、充满热情、善于解决问题的前端工程师，希望找到能让我充分发挥这些特长的工作。</p>
         <p class="go">应聘岗位：前端开发实习生</p>
+        <p class="desc">一个热爱前端、充满热情、善于解决问题的前端工程师，希望找到能让我充分发挥这些特长的工作。</p>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@ export default {
     }
     .text {
       .name {
-        padding: 30px 0;
+        padding: 30px 0 15px 0;
         line-height: 45px;
         color: $color-text-title;
         font-size: 40px;
@@ -66,7 +66,7 @@ export default {
         font-size: $font-size-small-x;
         font-weight: bold;
         color: $color-text-title;
-        padding: 20px 0 15px 0;
+        margin: 10px 0 20px 0;
       }
     }
   }
