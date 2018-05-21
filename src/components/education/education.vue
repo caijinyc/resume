@@ -6,7 +6,7 @@
         <div class="edu">
           <span class="school">{{education.school}}</span>
         </div>
-        <p class="major">{{education.major}}</p>
+        <!-- <p class="major">{{education.major}}</p> -->
         <p class="graduation">{{education.graduation}}</p>
         <p class="desc">{{education.desc}}</p>
       </div>

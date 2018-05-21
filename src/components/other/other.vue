@@ -15,7 +15,7 @@
               <a href="mailto:me@caijin.tech">{{other.email}}</a>
             </p>
           </div>
-          <div class="download"><span>下载简历</span></div>
+          <div class="download"><span @click="downloadCv">下载简历</span></div>
       </div>
     </div>
   </div>
@@ -42,6 +42,9 @@ export default {
     },
     goGithub () {
       window.open(this.other.github)
+    },
+    downloadCv () {
+      window.open('http://p87llnk7g.bkt.clouddn.com/%E7%AE%80%E5%8E%86%EF%BC%9A%28%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0,19%E5%B1%8A%E6%AF%95%E4%B8%9A%E7%94%9F%29%E8%94%A1%E9%94%A6.pdf')
     }
   }
 }

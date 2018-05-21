@@ -2,7 +2,7 @@
   <div class="home">
     <div class="home-wrapper">
       <div class="avatar">
-        <img src="./me.jpg" width="170" height="170">
+        <img src="./avatar.png" width="170" height="170">
       </div>
       <div class="text">
         <p class="name">蔡锦 CaiJinyc</p>

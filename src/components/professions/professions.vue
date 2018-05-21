@@ -30,9 +30,9 @@ export default {
       professions: {
         htmlcss: '熟练使用 HTML5、CSS3，能够编写语义化的 HTML，模块化的 CSS，能够完成比较复杂的布局。',
         scss: '熟练使用 SCSS、Autoprefixer、Bootstrap 等 CSS 预处理和框架。',
-        js: '熟练使用 原生 JavaScript、ES6、AJAX 能够运用模块化的方式编程。',
-        vue: '熟练使用 Vue.js、vuex、vue-router 等工具开发项目。',
-        other: '熟悉 Webpack 等前端自动化工具，熟悉 Git 版本管理工具。',
+        js: '熟练使用 原生 JavaScript、ES6 能够运用模块化的方式编程。',
+        vue: '熟悉 Vue.js、vuex、vue-router，并有相关开发经验。',
+        other: '了解 Webpack 前端自动化工具，熟悉 Git 版本管理工具。',
         design: '熟练使用 Photoshop、Illustrator 等设计工具，有一定的审美能力，能够准确还原设计稿。'
       }
     }

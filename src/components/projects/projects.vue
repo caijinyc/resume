@@ -9,13 +9,13 @@
         <p class="name" >
           <span @click="linkGithubMusic">Vue 网易云音乐 WebApp</span>
         </p>
-        <p class="desc">基于 Vue(2.5) + vuex + vue-router + vue-axios +better-scroll + Scss + ES6 等开发一款移动端音乐 WebApp，UI 界面精美、flex 布局适配常见移动端。</p>
+        <p class="desc">一款移动端音乐 WebApp，使用了 Vue、vue-router、vuex、axios、ES6 语法、SCSS 等开发。UI 界面参考了安卓版的网易云音乐、flex 布局适配常见移动端，实现了搜索、本地收藏、歌词、播放列表、播放模式（循环播放、随机播放、顺序播放）等功能，在 Github 上获得了 750+ star。</p>
       </div>
       <div class="vue-music">
         <p class="name" >
           <span @click="linkGithubGame">扫雷游戏</span>
         </p>
-        <p class="desc">使用原生 JavaScript 实现的一个扫雷游戏，实现了扫雷游戏的基本功能，例如：计时、选择游戏难度、标记地雷、剩余地雷、自动连锁点开、游戏成功和失败的动画等功能。</p>
+        <p class="desc">使用原生 JavaScript 实现的一个扫雷游戏，实现了扫雷游戏的基本功能，例如：计时、选择游戏难度、随机生成地雷地图、标记地雷、剩余地雷、自动连锁点开、游戏成功和失败的动画等功能。</p>
       </div>
 
     </div>
@@ -84,7 +84,7 @@ export default {
       }
       .desc {
         display: inline-block;
-        max-width: 700px;
+        max-width: 800px;
         font-size: 16px;
         line-height: 23px;
         color: $color-text-l;
