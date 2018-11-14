@@ -5,9 +5,9 @@
         <img src="./avatar.png" width="170" height="170">
       </div>
       <div class="text">
-        <p class="name">蔡锦 CaiJinyc</p>
-        <p class="go">应聘岗位：前端开发实习生</p>
-        <p class="desc">一个热爱前端、充满热情、善于解决问题的前端工程师，希望找到能让我充分发挥这些特长的工作。</p>
+        <p class="name">{{ name }}</p>
+        <p class="go">应聘岗位：{{ go }}</p>
+        <p class="desc">{{ desc }}</p>
       </div>
     </div>
   </div>
@@ -15,6 +15,13 @@
 
 <script>
 export default {
+  data () {
+    return {
+      name: '蔡锦 Orbem',
+      go: '前端开发工程师',
+      desc: '一个热爱前端、充满热情、善于解决问题的前端工程师，希望找到能让我充分发挥这些特长的工作。'
+    }
+  }
 }
 </script>
 

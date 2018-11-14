@@ -25,6 +25,11 @@
     </transition>
     <transition name="trs">
       <div class="other-wrapper" v-show="page === 4">
+        <career></career>
+      </div>
+    </transition>
+    <transition name="trs">
+      <div class="other-wrapper" v-show="page === 5">
         <other></other>
       </div>
     </transition>
@@ -44,12 +49,13 @@ import Projects from 'components/projects/projects'
 import Professions from 'components/professions/professions'
 import Education from 'components/education/education'
 import Other from 'components/other/other'
+import Career from 'components/career'
 
 export default {
   data () {
     return {
       page: 0,
-      pages: ['首页', '项目', '技能', '教育', '联系']
+      pages: ['首页', '项目', '技能', '教育', '经历', '联系']
     }
   },
   created () {
@@ -108,7 +114,8 @@ export default {
     Projects,
     Professions,
     Education,
-    Other
+    Other,
+    Career
   }
 }
 </script>

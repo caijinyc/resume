@@ -26,13 +26,13 @@ export default {
   data () {
     return {
       other: {
-        email: 'me@caijin.tech',
+        email: 'orbem@qq.com',
         tel: '153-4431-5015',
         qq: '610304098',
         major: '视觉传达专业',
         graduation: '2019年届毕业生',
-        blog: 'http://caijin.tech/blog/',
-        github: 'https://github.com/CaiJinyc'
+        blog: 'http://orbem.cc/blog/',
+        github: 'https://github.com/orbem'
       }
     }
   },
